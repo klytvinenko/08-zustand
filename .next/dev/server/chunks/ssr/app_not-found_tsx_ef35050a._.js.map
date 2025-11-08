@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/mac/Documents/GitHub/08-zustand/app/not-found.tsx"],"sourcesContent":["// app/not-found.tsx\n\nimport Link from 'next/link';\n\nconst NotFound = () => {\n  return (\n    <div>\n      <h1>404 - Page Not Found</h1>\n      <p>Sorry, the page you&#39;re looking for doesn&#39;t exist.</p>\n      <Link href=\"/\">Go back home</Link>\n    </div>\n  );\n};\n\nexport default NotFound;\n\n"],"names":[],"mappings":"AAAA,oBAAoB;;;;;;AAEpB;;;AAEA,MAAM,WAAW;IACf,qBACE,8OAAC;;0BACC,8OAAC;0BAAG;;;;;;0BACJ,8OAAC;0BAAE;;;;;;0BACH,8OAAC,0LAAI;gBAAC,MAAK;0BAAI;;;;;;;;;;;;AAGrB;uCAEe","debugId":null}}]
+}

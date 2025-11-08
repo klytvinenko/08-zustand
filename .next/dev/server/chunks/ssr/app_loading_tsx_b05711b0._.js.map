@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/mac/Documents/GitHub/08-zustand/app/loading.tsx"],"sourcesContent":["const Loading = () => {\n    return <p>Loading, please wait...</p>\n\n}\n\nexport default Loading;"],"names":[],"mappings":";;;;;;AAAA,MAAM,UAAU;IACZ,qBAAO,8OAAC;kBAAE;;;;;;AAEd;uCAEe","debugId":null}}]
+}

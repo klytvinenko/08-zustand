@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 10, "column": 0}, "map": {"version":3,"sources":["file:///Users/mac/Documents/GitHub/08-zustand/components/TanStackProvider/TanStackProvider.tsx"],"sourcesContent":["// components/TanStackProvider/TanStackProvider.tsx\n\n\"use client\";\n\nimport { useState } from \"react\";\nimport { QueryClient, QueryClientProvider } from \"@tanstack/react-query\";\n\ntype Props = {\n  children: React.ReactNode;\n};\n\nconst TanStackProvider = ({ children }: Props) => {\n  const [queryClient] = useState(() => new QueryClient());\n\n  return (\n    <QueryClientProvider client={queryClient}>\n      {children}\n    </QueryClientProvider>\n  );\n};\n\nexport default TanStackProvider;"],"names":[],"mappings":"AAAA,mDAAmD;;;;;;AAInD;AACA;AAAA;AAHA;;;;AASA,MAAM,mBAAmB,CAAC,EAAE,QAAQ,EAAS;IAC3C,MAAM,CAAC,YAAY,GAAG,IAAA,iNAAQ,EAAC,IAAM,IAAI,4LAAW;IAEpD,qBACE,8OAAC,6MAAmB;QAAC,QAAQ;kBAC1B;;;;;;AAGP;uCAEe","debugId":null}}]
+}

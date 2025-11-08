@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/mac/Documents/GitHub/08-zustand/app/notes/filter/layout.tsx"],"sourcesContent":["type FilterLayoutProps = {\n  children: React.ReactNode;\n  sidebar: React.ReactNode;\n};\n\nexport default function Layout({ children, sidebar }: FilterLayoutProps) {\n  return (\n  <section>\n      <aside >\n        {sidebar}\n      </aside>\n      <main >{children}</main>\n    </section>\n  );\n}"],"names":[],"mappings":";;;;;;AAKe,SAAS,OAAO,EAAE,QAAQ,EAAE,OAAO,EAAqB;IACrE,qBACA,8OAAC;;0BACG,8OAAC;0BACE;;;;;;0BAEH,8OAAC;0BAAO;;;;;;;;;;;;AAGd","debugId":null}}]
+}

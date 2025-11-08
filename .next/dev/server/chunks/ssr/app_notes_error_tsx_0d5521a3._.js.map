@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///Users/mac/Documents/GitHub/08-zustand/app/notes/error.tsx"],"sourcesContent":["\"use client\";\n\ntype Props = {\n  error: Error;\n};\n\nconst Error = ({ error }: Props) => {\n  return <p>Could not fetch the list of notes. {error.message}</p>;\n};\n\nexport default Error;"],"names":[],"mappings":";;;;;AAAA;;AAMA,MAAM,QAAQ,CAAC,EAAE,KAAK,EAAS;IAC7B,qBAAO,8OAAC;;YAAE;YAAoC,MAAM,OAAO;;;;;;;AAC7D;uCAEe","debugId":null}}]
+}
