@@ -5,9 +5,35 @@ import {
 } from "@tanstack/react-query";
 import NotesClient from "./Notes.client";
 import { fetchNotes } from "@/lib/api";
+import { Metadata } from "next";
 
 interface FilterPageProps {
   params: Promise<{ slug: string[] }>;
+}
+
+export const generateMetadata = async ({params}: FilterPageProps) : Promise<Metadata> => {
+const {slug} = await params;
+ const tag = slug?.[0];
+
+ return {
+  title: `Notehub - ${tag}`,
+  description:` Notes filtered for tag - ${tag}`,
+  openGraph: {
+    title: `Notes:${tag}`,
+    description:`Notes filtered for tag: ${tag}`,
+    url: `https://notehub.com/notes/filter/${tag}`,
+    siteName: 'Notehub',
+    images: [
+        {
+          url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+          width: 1200,
+          height: 630,
+          alt: tag,
+        },
+      ],
+  }
+ }
+
 }
 
 const FilterPage = async ({ params }: FilterPageProps) => {
@@ -31,25 +57,3 @@ const FilterPage = async ({ params }: FilterPageProps) => {
 };
 
 export default FilterPage;
-
-// import NotesClient from "./Notes.client";
-
-// interface FilterPageProps {
-//   params: Promise<{ slug: string[] }>;
-
-// }
-
-// const FilterPage = async ({ params }: FilterPageProps) => {
-//   const { slug } = await params;
-//   const tag = slug?.[0]; //|| "all"
-
-//   // const responce = await fetchNotes("", 1, tag === "all" ? undefined : tag);
-
-//   return (
-//     <div>
-//       <NotesClient key={tag ?? "all"} tag={tag} />
-//     </div>
-//   );
-// };
-
-// export default FilterPage;

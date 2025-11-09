@@ -195,7 +195,9 @@ const fetchNoteById = async (id)=>{
 
 __turbopack_context__.s([
     "default",
-    ()=>__TURBOPACK__default__export__
+    ()=>__TURBOPACK__default__export__,
+    "generateMetadata",
+    ()=>generateMetadata
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/rsc/react-jsx-dev-runtime.js [app-rsc] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f40$tanstack$2f$query$2d$core$2f$build$2f$modern$2f$hydration$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/@tanstack/query-core/build/modern/hydration.js [app-rsc] (ecmascript)");
@@ -207,6 +209,28 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2e$ts__$5b$app$2d
 ;
 ;
 ;
+const generateMetadata = async ({ params })=>{
+    const { slug } = await params;
+    const tag = slug?.[0];
+    return {
+        title: `Notehub - ${tag}`,
+        description: ` Notes filtered for tag - ${tag}`,
+        openGraph: {
+            title: `Notes:${tag}`,
+            description: `Notes filtered for tag: ${tag}`,
+            url: `https://notehub.com/notes/filter/${tag}`,
+            siteName: 'Notehub',
+            images: [
+                {
+                    url: 'https://ac.goit.global/fullstack/react/notehub-og-meta.jpg',
+                    width: 1200,
+                    height: 630,
+                    alt: tag
+                }
+            ]
+        }
+    };
+};
 const FilterPage = async ({ params })=>{
     const { slug } = await params;
     const tag = slug?.[0]; //|| "all"
@@ -226,31 +250,16 @@ const FilterPage = async ({ params })=>{
             tag: tag
         }, tag ?? "all", false, {
             fileName: "[project]/app/notes/filter/[...slug]/page.tsx",
-            lineNumber: 28,
+            lineNumber: 54,
             columnNumber: 7
         }, ("TURBOPACK compile-time value", void 0))
     }, void 0, false, {
         fileName: "[project]/app/notes/filter/[...slug]/page.tsx",
-        lineNumber: 27,
+        lineNumber: 53,
         columnNumber: 5
     }, ("TURBOPACK compile-time value", void 0));
 };
 const __TURBOPACK__default__export__ = FilterPage;
- // import NotesClient from "./Notes.client";
- // interface FilterPageProps {
- //   params: Promise<{ slug: string[] }>;
- // }
- // const FilterPage = async ({ params }: FilterPageProps) => {
- //   const { slug } = await params;
- //   const tag = slug?.[0]; //|| "all"
- //   // const responce = await fetchNotes("", 1, tag === "all" ? undefined : tag);
- //   return (
- //     <div>
- //       <NotesClient key={tag ?? "all"} tag={tag} />
- //     </div>
- //   );
- // };
- // export default FilterPage;
 }),
 ];
 

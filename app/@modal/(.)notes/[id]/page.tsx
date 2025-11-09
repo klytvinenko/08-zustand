@@ -1,7 +1,12 @@
 import { dehydrate, HydrationBoundary, QueryClient } from "@tanstack/react-query";
 import NotePreviewClient from "./NotePreview.client";
 import { fetchNoteById } from "@/lib/api";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Note details",
+  description: "Page for previewing notes",
+};
 
 interface NoteDetailsProps {
   params: Promise<{ id: string }>;

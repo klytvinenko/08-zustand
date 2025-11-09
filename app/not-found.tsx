@@ -1,6 +1,25 @@
 // app/not-found.tsx
 
-import Link from 'next/link';
+import { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "Page Not Found",
+  description: "Sorry, the page you&#39;re looking for doesn&#39;t exist.",
+  openGraph: {
+    title: "Page Not Found",
+    description: "Sorry, the page you&#39;re looking for doesn&#39;t exist.",
+    url: "https://notehub.com/not-found",
+    images: [
+      {
+        url: "https://ac.goit.global/fullstack/react/notehub-og-meta.jpg",
+        width: 1200,
+        height: 630,
+        alt: "NoteHub — сторінку не знайдено",
+      },
+    ]
+  },
+};
 
 const NotFound = () => {
   return (
@@ -13,4 +32,3 @@ const NotFound = () => {
 };
 
 export default NotFound;
-

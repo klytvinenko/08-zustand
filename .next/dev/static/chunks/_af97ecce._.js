@@ -980,6 +980,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteForm$2f$No
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Modal$2f$Modal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/Modal/Modal.tsx [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$api$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/lib/api.ts [app-client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Pagination$2f$Pagination$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/Pagination/Pagination.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
 ;
 var _s = __turbopack_context__.k.signature();
 "use client";
@@ -994,14 +995,15 @@ var _s = __turbopack_context__.k.signature();
 ;
 ;
 ;
+;
 const NotesClient = (t0)=>{
     _s();
-    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(32);
-    if ($[0] !== "a91506b49d949d89fe3626a1f2bf7c4a76c396eefcc9309e8372e0ea04f7ebee") {
-        for(let $i = 0; $i < 32; $i += 1){
+    const $ = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$compiler$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["c"])(31);
+    if ($[0] !== "775b2735183ff50450862f498e0ea42c1844a5a0118a277fe6d712bc18288644") {
+        for(let $i = 0; $i < 31; $i += 1){
             $[$i] = Symbol.for("react.memo_cache_sentinel");
         }
-        $[0] = "a91506b49d949d89fe3626a1f2bf7c4a76c396eefcc9309e8372e0ea04f7ebee";
+        $[0] = "775b2735183ff50450862f498e0ea42c1844a5a0118a277fe6d712bc18288644";
     }
     const { tag } = t0;
     const [search, setSearch] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
@@ -1040,188 +1042,178 @@ const NotesClient = (t0)=>{
     let t3;
     if ($[7] === Symbol.for("react.memo_cache_sentinel")) {
         t3 = ()=>{
-            setIsOpenModal(true);
+            setIsOpenModal(false);
         };
         $[7] = t3;
     } else {
         t3 = $[7];
     }
-    const onOpen = t3;
+    const onClose = t3;
     let t4;
     if ($[8] === Symbol.for("react.memo_cache_sentinel")) {
-        t4 = ()=>{
-            setIsOpenModal(false);
+        t4 = (value)=>{
+            setSearch(value);
+            setPage(1);
         };
         $[8] = t4;
     } else {
         t4 = $[8];
     }
-    const onClose = t4;
+    const onSearch = t4;
     let t5;
     if ($[9] === Symbol.for("react.memo_cache_sentinel")) {
-        t5 = (value)=>{
-            setSearch(value);
-            setPage(1);
-        };
+        t5 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$SearchBox$2f$SearchBox$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+            onSearch: onSearch
+        }, void 0, false, {
+            fileName: "[project]/app/notes/filter/[...slug]/Notes.client.tsx",
+            lineNumber: 83,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
         $[9] = t5;
     } else {
         t5 = $[9];
     }
-    const onSearch = t5;
     let t6;
-    if ($[10] === Symbol.for("react.memo_cache_sentinel")) {
-        t6 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$SearchBox$2f$SearchBox$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
-            onSearch: onSearch
-        }, void 0, false, {
-            fileName: "[project]/app/notes/filter/[...slug]/Notes.client.tsx",
-            lineNumber: 92,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[10] = t6;
-    } else {
-        t6 = $[10];
-    }
-    let t7;
-    if ($[11] !== page || $[12] !== total_pages) {
-        t7 = total_pages > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Pagination$2f$Pagination$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+    if ($[10] !== page || $[11] !== total_pages) {
+        t6 = total_pages > 1 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Pagination$2f$Pagination$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
             totalPages: total_pages,
             page: page,
             setPage: setPage
         }, void 0, false, {
             fileName: "[project]/app/notes/filter/[...slug]/Notes.client.tsx",
-            lineNumber: 99,
+            lineNumber: 90,
             columnNumber: 29
         }, ("TURBOPACK compile-time value", void 0));
-        $[11] = page;
-        $[12] = total_pages;
+        $[10] = page;
+        $[11] = total_pages;
+        $[12] = t6;
+    } else {
+        t6 = $[12];
+    }
+    let t7;
+    if ($[13] === Symbol.for("react.memo_cache_sentinel")) {
+        t7 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+            href: "/notes/action/create",
+            className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$notes$2f$filter$2f5b2e2e2e$slug$5d2f$Notes$2e$client$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].button,
+            children: "Create note +"
+        }, void 0, false, {
+            fileName: "[project]/app/notes/filter/[...slug]/Notes.client.tsx",
+            lineNumber: 99,
+            columnNumber: 10
+        }, ("TURBOPACK compile-time value", void 0));
         $[13] = t7;
     } else {
         t7 = $[13];
     }
     let t8;
-    if ($[14] === Symbol.for("react.memo_cache_sentinel")) {
-        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-            className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$notes$2f$filter$2f5b2e2e2e$slug$5d2f$Notes$2e$client$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].button,
-            onClick: onOpen,
-            children: "Create note +"
-        }, void 0, false, {
-            fileName: "[project]/app/notes/filter/[...slug]/Notes.client.tsx",
-            lineNumber: 108,
-            columnNumber: 10
-        }, ("TURBOPACK compile-time value", void 0));
-        $[14] = t8;
-    } else {
-        t8 = $[14];
-    }
-    let t9;
-    if ($[15] !== t7) {
-        t9 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
+    if ($[14] !== t6) {
+        t8 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
             className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$notes$2f$filter$2f5b2e2e2e$slug$5d2f$Notes$2e$client$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].toolbar,
             children: [
+                t5,
                 t6,
-                t7,
-                t8
+                t7
             ]
         }, void 0, true, {
             fileName: "[project]/app/notes/filter/[...slug]/Notes.client.tsx",
-            lineNumber: 115,
+            lineNumber: 106,
             columnNumber: 10
         }, ("TURBOPACK compile-time value", void 0));
-        $[15] = t7;
-        $[16] = t9;
+        $[14] = t6;
+        $[15] = t8;
     } else {
-        t9 = $[16];
+        t8 = $[15];
     }
-    let t10;
-    if ($[17] !== isLoading) {
-        t10 = isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+    let t9;
+    if ($[16] !== isLoading) {
+        t9 = isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
             children: "Loading..."
         }, void 0, false, {
             fileName: "[project]/app/notes/filter/[...slug]/Notes.client.tsx",
-            lineNumber: 123,
-            columnNumber: 24
+            lineNumber: 114,
+            columnNumber: 23
         }, ("TURBOPACK compile-time value", void 0));
-        $[17] = isLoading;
-        $[18] = t10;
+        $[16] = isLoading;
+        $[17] = t9;
     } else {
-        t10 = $[18];
+        t9 = $[17];
     }
-    let t11;
-    if ($[19] !== notes) {
-        t11 = notes.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$NoteList$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+    let t10;
+    if ($[18] !== notes) {
+        t10 = notes.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteList$2f$NoteList$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
             notes: notes || []
         }, void 0, false, {
             fileName: "[project]/app/notes/filter/[...slug]/Notes.client.tsx",
-            lineNumber: 131,
+            lineNumber: 122,
             columnNumber: 31
         }, ("TURBOPACK compile-time value", void 0));
-        $[19] = notes;
-        $[20] = t11;
+        $[18] = notes;
+        $[19] = t10;
     } else {
-        t11 = $[20];
+        t10 = $[19];
     }
-    let t12;
-    if ($[21] !== isLoading || $[22] !== notes.length) {
-        t12 = notes.length === 0 && !isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+    let t11;
+    if ($[20] !== isLoading || $[21] !== notes.length) {
+        t11 = notes.length === 0 && !isLoading && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
             children: "No notes found"
         }, void 0, false, {
             fileName: "[project]/app/notes/filter/[...slug]/Notes.client.tsx",
-            lineNumber: 139,
+            lineNumber: 130,
             columnNumber: 47
         }, ("TURBOPACK compile-time value", void 0));
-        $[21] = isLoading;
-        $[22] = notes.length;
-        $[23] = t12;
+        $[20] = isLoading;
+        $[21] = notes.length;
+        $[22] = t11;
     } else {
-        t12 = $[23];
+        t11 = $[22];
     }
-    let t13;
-    if ($[24] !== isOpenModal) {
-        t13 = isOpenModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Modal$2f$Modal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+    let t12;
+    if ($[23] !== isOpenModal) {
+        t12 = isOpenModal && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Modal$2f$Modal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
             onClose: onClose,
             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$NoteForm$2f$NoteForm$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
                 onClose: onClose
             }, void 0, false, {
                 fileName: "[project]/app/notes/filter/[...slug]/Notes.client.tsx",
-                lineNumber: 148,
+                lineNumber: 139,
                 columnNumber: 51
             }, ("TURBOPACK compile-time value", void 0))
         }, void 0, false, {
             fileName: "[project]/app/notes/filter/[...slug]/Notes.client.tsx",
-            lineNumber: 148,
+            lineNumber: 139,
             columnNumber: 26
         }, ("TURBOPACK compile-time value", void 0));
-        $[24] = isOpenModal;
-        $[25] = t13;
+        $[23] = isOpenModal;
+        $[24] = t12;
     } else {
-        t13 = $[25];
+        t12 = $[24];
     }
-    let t14;
-    if ($[26] !== t10 || $[27] !== t11 || $[28] !== t12 || $[29] !== t13 || $[30] !== t9) {
-        t14 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+    let t13;
+    if ($[25] !== t10 || $[26] !== t11 || $[27] !== t12 || $[28] !== t8 || $[29] !== t9) {
+        t13 = /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
             className: __TURBOPACK__imported__module__$5b$project$5d2f$app$2f$notes$2f$filter$2f5b2e2e2e$slug$5d2f$Notes$2e$client$2e$module$2e$css__$5b$app$2d$client$5d$__$28$css__module$29$__["default"].app,
             children: [
+                t8,
                 t9,
                 t10,
                 t11,
-                t12,
-                t13
+                t12
             ]
         }, void 0, true, {
             fileName: "[project]/app/notes/filter/[...slug]/Notes.client.tsx",
-            lineNumber: 156,
+            lineNumber: 147,
             columnNumber: 11
         }, ("TURBOPACK compile-time value", void 0));
-        $[26] = t10;
-        $[27] = t11;
-        $[28] = t12;
-        $[29] = t13;
-        $[30] = t9;
-        $[31] = t14;
+        $[25] = t10;
+        $[26] = t11;
+        $[27] = t12;
+        $[28] = t8;
+        $[29] = t9;
+        $[30] = t13;
     } else {
-        t14 = $[31];
+        t13 = $[30];
     }
-    return t14;
+    return t13;
 };
 _s(NotesClient, "6wFVPlNp6LEhP2qwLHqI8exsEog=", false, function() {
     return [
