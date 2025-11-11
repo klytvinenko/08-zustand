@@ -1,80 +1,61 @@
-"use client";
-import css from "./NoteForm.module.css";
 
-import { useMutation, useQueryClient } from "@tanstack/react-query";
+"use client";
+
+import { useMutation } from "@tanstack/react-query";
 import { createNote } from "@/lib/api";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import css from "./NoteForm.module.css";
+import useNoteDraftStore from "@/lib/store/noteStore";
+import { NewNote} from "@/types/note";
 
-interface FormValues {
-  title: string;
-  content: string;
-  tag: string;
-}
-const initialValues: FormValues = {
-  title: "",
-  content: "",
-  tag: "Todo",
-};
+type Tag = "Todo" | "Work" | "Personal";
+export default function NoteForm() {
+  const router = useRouter();
+  const { draft, setDraft, clearDraft } = useNoteDraftStore();
 
-const NoteForm = () => {
-  const queryClient = useQueryClient();
-  const { mutate } = useMutation({
+  const { mutate, isPending } = useMutation({
     mutationFn: createNote,
     onSuccess: () => {
-      queryClient.invalidateQueries({
-        queryKey: ["notes"],
-      });
+      clearDraft();
+      router.back();
     },
   });
-  const [form, setForm] = useState<FormValues>(initialValues);
-  const router = useRouter();
-
-  // const handleSubmit = (
-  //   values: FormValues,
-  //   actions: FormikHelpers<FormValues>
-  // ) => {
-  //   console.log(values);
-  //   mutate(values);
-  //   actions.resetForm();
-  // };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!form.title || form.title.length < 3) {
-      return;
-    }
-
-   mutate(form);
-    queryClient.invalidateQueries({ queryKey: ["notes"] });
-    setForm(initialValues);
-    console.log(form);
-
-   
-  };
-  const handleCancel = () => {
-    router.push("/notes");
-  };
 
   const handleChange = (
-    e: React.ChangeEvent<
+    event: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
+    setDraft({
+      ...draft,
+      [event.target.name]: event.target.value,
+    });
   };
+
+  const handleSubmit = (formData: FormData) => {
+    const data: NewNote = {
+      title: formData.get("title") as string,
+      content: formData.get("content") as string,
+      tag: formData.get("tag") as Tag,
+    };
+
+    mutate(data);
+  };
+
+  const handleClose = () => router.back();
+
   return (
-    <form className={css.form} onSubmit={handleSubmit}>
+    <form className={css.form} action={handleSubmit}>
       <div className={css.formGroup}>
         <label htmlFor="title">Title</label>
         <input
           id="title"
           type="text"
           name="title"
-          className={css.input}
+          defaultValue={draft?.title}
           onChange={handleChange}
-          value={form.title}  
+          className={css.input}
+          required
         />
       </div>
 
@@ -82,11 +63,11 @@ const NoteForm = () => {
         <label htmlFor="content">Content</label>
         <textarea
           id="content"
-          name="content"
           rows={8}
-          className={css.textarea}
+          name="content"
+          defaultValue={draft?.content}
           onChange={handleChange}
-          value={form.content}  
+          className={css.textarea}
         />
       </div>
 
@@ -95,9 +76,9 @@ const NoteForm = () => {
         <select
           id="tag"
           name="tag"
-          className={css.select}
+          defaultValue={draft?.tag || "Todo"}
           onChange={handleChange}
-          value={form.tag}  
+          className={css.select}
         >
           <option value="Todo">Todo</option>
           <option value="Work">Work</option>
@@ -111,15 +92,14 @@ const NoteForm = () => {
         <button
           type="button"
           className={css.cancelButton}
-          onClick={handleCancel}
+          onClick={handleClose}
         >
           Cancel
         </button>
-        <button type="submit" className={css.submitButton} disabled={false}>
+        <button type="submit" className={css.submitButton} disabled={isPending}>
           Create note
         </button>
       </div>
     </form>
   );
-};
-export default NoteForm;
+}

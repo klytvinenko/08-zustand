@@ -13,3 +13,8 @@ export interface Note {
   content: string;
   tag: string;
  }
+ export interface NewNoteContent {
+   title: string;
+   content: string;
+   tag: string;
+ }
